@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bullseyeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move Slider to rNum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwt-uy-tfT">
+                                <rect key="frame" x="16" y="111" width="343" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="5Ke-h4-Pg9"/>
+                                    <constraint firstAttribute="width" constant="343" id="Ilb-wc-165"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4I-aX-grX">
+                                <rect key="frame" x="17" y="452" width="341" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="K1p-0S-miC"/>
+                                    <constraint firstAttribute="height" constant="92" id="YuT-4v-Udl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="u5d-P9-hFX">
+                                <rect key="frame" x="15" y="319" width="345" height="31"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="KCr-bv-PjE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="guessNum:" destination="BYZ-38-t0r" eventType="valueChanged" id="I6g-YS-vgA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exact Mode?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz0-zV-yUX">
+                                <rect key="frame" x="127.5" y="582" width="120" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="aKU-ap-MuJ"/>
+                                    <constraint firstAttribute="width" constant="120" id="uUh-62-2KJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SJY-ZR-onj">
+                                <rect key="frame" x="163" y="616" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Ihw-he-5Cm"/>
+                                    <constraint firstAttribute="height" constant="31" id="lRM-Tp-5vz"/>
+                                </constraints>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fL-G2-FJY">
+                                <rect key="frame" x="117.5" y="371" width="140" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="AOX-ha-cWR"/>
+                                    <constraint firstAttribute="height" constant="58" id="kYi-8g-XXe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <state key="normal" title="Check?">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrr-ZS-wc6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSd-Ve-ZxN">
+                                <rect key="frame" x="313" y="26" width="44" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="7Tj-FT-mY7"/>
+                                    <constraint firstAttribute="height" constant="35" id="ab0-bE-e7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Score">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcX-XH-1vC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.62579105688027137" green="0.780859356047236" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e4I-aX-grX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0N7-GI-Rr4"/>
+                            <constraint firstItem="7fL-G2-FJY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1cM-Au-ke2"/>
+                            <constraint firstItem="dwt-uy-tfT" firstAttribute="top" secondItem="aSd-Ve-ZxN" secondAttribute="bottom" constant="50" id="8QG-32-Ktm"/>
+                            <constraint firstItem="Xz0-zV-yUX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8s1-cK-KpF"/>
+                            <constraint firstItem="aSd-Ve-ZxN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="CYa-0i-QaS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSd-Ve-ZxN" secondAttribute="trailing" constant="18" id="GcG-LG-IBV"/>
+                            <constraint firstItem="dwt-uy-tfT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KE0-WF-Dt0"/>
+                            <constraint firstItem="Xz0-zV-yUX" firstAttribute="top" secondItem="e4I-aX-grX" secondAttribute="bottom" constant="38" id="PgS-7S-Db2"/>
+                            <constraint firstItem="7fL-G2-FJY" firstAttribute="top" secondItem="u5d-P9-hFX" secondAttribute="bottom" constant="22" id="Phs-L2-QRh"/>
+                            <constraint firstItem="SJY-ZR-onj" firstAttribute="top" secondItem="Xz0-zV-yUX" secondAttribute="bottom" constant="8" id="UnS-1n-61N"/>
+                            <constraint firstItem="e4I-aX-grX" firstAttribute="top" secondItem="7fL-G2-FJY" secondAttribute="bottom" constant="23" id="VH9-1C-i8w"/>
+                            <constraint firstItem="SJY-ZR-onj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="icR-ZB-Qv0"/>
+                            <constraint firstItem="u5d-P9-hFX" firstAttribute="top" secondItem="dwt-uy-tfT" secondAttribute="bottom" constant="126" id="qqO-Nh-3IF"/>
+                            <constraint firstItem="u5d-P9-hFX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uzx-vG-YTE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="7fL-G2-FJY" id="S17-H5-gP2"/>
+                        <outlet property="exactMode" destination="SJY-ZR-onj" id="2PE-XS-5Mm"/>
+                        <outlet property="guessCosmetic" destination="u5d-P9-hFX" id="hbH-Hi-heV"/>
+                        <outlet property="guessResult" destination="e4I-aX-grX" id="Dmj-Zy-K8j"/>
+                        <outlet property="userRequest" destination="dwt-uy-tfT" id="nfR-lg-ovy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
